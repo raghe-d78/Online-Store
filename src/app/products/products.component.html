@@ -1,0 +1,44 @@
+<div class="container border border-dark rounded p-4 my-4">
+
+  <h2 class="mb-4 text-center">Welcome to Online Store</h2>
+
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+    <div class="col" *ngFor="let product of products">
+      <div class="card h-100 shadow-sm">
+
+        <!-- Image -->
+        <div class="bg-body-tertiary d-flex align-items-center justify-content-center p-3"
+             style="height: 180px;">
+          <img
+            [src]="product.image || 'assets/images/default.png'"
+            [alt]="product.name"
+            class="mw-100 mh-100"
+            style="object-fit: contain;">
+        </div>
+
+        <!-- Details -->
+        <div class="card-body">
+          <h6 class="card-title fw-semibold mb-2">{{ product.name }}</h6>
+
+          <p class="card-text small mb-1">
+            <span class="text-body-secondary">Price:</span>
+            <span class="fw-semibold">{{ product.price }}</span>
+          </p>
+
+          <p class="card-text small mb-1">
+            <span class="text-body-secondary">Quantity:</span>
+            {{ product.quantity }}
+          </p>
+
+          <p class="card-text small mb-0">
+            <span class="text-body-secondary">Code:</span>
+            {{ product.code }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
