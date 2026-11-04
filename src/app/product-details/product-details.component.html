@@ -1,0 +1,27 @@
+<div>
+
+  <div class="mb-2" style="width: 110px; height: 145px;">
+    <img
+      [src]="product.image || 'assets/images/no-image.png'"
+      [alt]="product.name"
+      class="mw-100 mh-100"
+      style="object-fit: contain;">
+  </div>
+
+  <div class="small fw-semibold mb-2">
+    {{ product.name }}
+  </div>
+
+  <div class="small mb-2">
+    Price: {{ product.price }}
+  </div>
+
+  <div class="small mb-2">
+    Quantity: {{ product.quantity }}
+  </div>
+
+  <div class="small">
+    Code: {{ product.code }}
+  </div>
+
+</div>

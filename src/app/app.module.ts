@@ -10,6 +10,7 @@ import { NameComponent } from './name/name.component';
 import { FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductsComponent } from './products/products.component';
     ContactsComponent,
     NameComponent,
     UserComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

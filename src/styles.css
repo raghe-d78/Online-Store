@@ -4,3 +4,36 @@ body {
   font-family: Arial, sans-serif;
   background-color: white;
 }
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #6366f1;
+    --accent-color: #f59e0b;
+
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --white-color: #ffffff;
+}
+.text-primary-color {
+    color: var(--primary-color) !important;
+}
+.navbar-bg{
+    background-color: var(--secondary-color) !important;
+}
+
+.text-secondary-color {
+    color: var(--secondary-color);
+}
+
+.text-accent-color {
+    color: var(--accent-color) ;
+}
+.text-dark-color {
+    color: var(--text-color) !important;
+}
+.text-main {
+    color: var(--text-color);
+}
+.border-secondary-color {
+    border-color: #6366f1 !important;
+}
+

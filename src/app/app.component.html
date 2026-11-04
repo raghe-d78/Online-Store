@@ -1,13 +1,17 @@
-<nav class="navbar navbar-dark bg-primary shadow-sm">
-  <div class="container">
-    <span class="navbar-brand mb-0 h1">{{ title }}</span>
-  </div>
-</nav>
+<div class="container mt-4">
+  <nav class="navbar navbar-expand-lg bg-white border border-secondary-color rounded shadow-sm px-3 app-navbar">
+
+  
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold text-secondary-color" routerLink="/">
+      <i class="bi bi-shop fs-4 text-primary-color"></i>
+      <span>{{ title }}</span>
+    </a>
+</nav></div>
 
 <main class="container py-4">
   <div class="card border-0 shadow-sm">
     <div class="card-body">
-      <h1 class="card-title h3 mb-4">Product Catalog</h1>
+      <h1 class="card-title h3 mb-4 text-primary-color">Product Catalog</h1>
       <app-products></app-products>
     </div>
   </div>
