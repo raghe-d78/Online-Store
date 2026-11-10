@@ -1,18 +1,75 @@
-<div class="container mt-4">
-  <nav class="navbar navbar-expand-lg bg-white border border-secondary-color rounded shadow-sm px-3 app-navbar">
 
-  
-    <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold text-secondary-color" routerLink="/">
-      <i class="bi bi-shop fs-4 text-primary-color"></i>
-      <span>{{ title }}</span>
-    </a>
-</nav></div>
+<header class="container pt-4">
+  <nav class="navbar navbar-expand-lg bg-white border rounded-3 shadow-sm px-3">
+
+    <div class="container-fluid">
+
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold text-primary"
+         routerLink="/">
+        <i class="bi bi-bag me-2"></i>
+        {{ title }}
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/"
+               routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact: true}">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/products"
+               routerLinkActive="active">
+              Products
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/about"
+               routerLinkActive="active">
+              About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">
+              Contact
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="btn btn-primary btn-sm px-3"
+               routerLink="/products">
+              <i class="bi bi-cart me-1"></i>
+              Shop Now
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</header>
 
 <main class="container py-4">
-  <div class="card border-0 shadow-sm">
-    <div class="card-body">
-      <h1 class="card-title h3 mb-4 text-primary-color">Product Catalog</h1>
-      <app-products></app-products>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </main>

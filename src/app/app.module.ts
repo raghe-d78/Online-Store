@@ -4,23 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { ContactsComponent } from './contacts/contacts.component';
-import { NameComponent } from './name/name.component';
+
 import { FormsModule } from '@angular/forms';
-import { UserComponent } from './user/user.component';
+
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
-    ContactsComponent,
-    NameComponent,
-    UserComponent,
+    
     ProductsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ProductPageComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
