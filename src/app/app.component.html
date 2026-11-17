@@ -4,14 +4,12 @@
 
     <div class="container-fluid">
 
-      <!-- Brand -->
       <a class="navbar-brand fw-bold text-primary"
          routerLink="/">
         <i class="bi bi-bag me-2"></i>
         {{ title }}
       </a>
 
-      <!-- Mobile toggle -->
       <button class="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -19,7 +17,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Navigation links -->
       <div class="collapse navbar-collapse" id="navbarContent">
 
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
@@ -27,8 +24,8 @@
           <li class="nav-item">
             <a class="nav-link"
                routerLink="/"
-               routerLinkActive="active"
-               [routerLinkActiveOptions]="{exact: true}">
+              
+               [hidden]="!isAuth">
               Home
             </a>
           </li>
@@ -36,33 +33,18 @@
           <li class="nav-item">
             <a class="nav-link"
                routerLink="/products"
-               routerLinkActive="active">
-              Products
+               [hidden]="!isAuth" >
+              Product management
             </a>
           </li>
-
+          
           <li class="nav-item">
-            <a class="nav-link"
-               routerLink="/about"
-               routerLinkActive="active">
-              About
+            <a class="nav-link" routerLink="/signin">
+              Sign In
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contact">
-              Contact
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="btn btn-primary btn-sm px-3"
-               routerLink="/products">
-              <i class="bi bi-cart me-1"></i>
-              Shop Now
-            </a>
-          </li>
-
+          
         </ul>
 
       </div>

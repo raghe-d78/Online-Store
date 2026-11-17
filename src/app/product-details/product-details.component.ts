@@ -9,5 +9,10 @@ import { Product } from '../models/product';
 export class ProductDetailsComponent {
 
   @Input() product!: Product;
+  @Input() onDelete!: () => void;
+  deleteProduct(): void {
+    if (this.onDelete) {
+      this.onDelete();
+    }}
 
 }

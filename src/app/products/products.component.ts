@@ -13,4 +13,8 @@ export class ProductsComponent {
 
   ngOnInit(): void {
     this.products = this.productService.getProducts();
-}}
+}
+  deleteProduct(id:number){
+    this.productService.deleteProduct(id);
+  }
+}

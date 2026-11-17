@@ -1,1 +1,29 @@
-<p>coming soon !!</p>
+<section class="container py-5">
+
+  <div class="p-4 p-md-5 mb-5 bg-primary-subtle rounded-4 text-center">
+    <h1 class="display-4 fw-bold mb-3">{{ welcomeMessage }}</h1>
+    <p class="lead text-body-secondary mx-auto mb-4" style="max-width: 36rem;">
+      {{ discoverMessage }}
+    </p>
+   
+  </div>
+
+ 
+  <h2 id="promotions" class="h4 fw-bold mb-3">Promotions</h2>
+
+  <div class="row row-cols-1 row-cols-md-3 g-3">
+    @for (promo of promotions; track promo) {
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body d-flex align-items-start gap-3 p-4">
+            <span class="d-inline-flex align-items-center justify-content-center flex-shrink-0
+                         rounded-circle bg-primary text-white fw-bold"
+                  style="width: 2.25rem; height: 2.25rem;" aria-hidden="true">&#10003;</span>
+            <p class="card-text mb-0">{{ promo }}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+</section>
