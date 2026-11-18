@@ -10,7 +10,6 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 const routes: Routes = [
   { path: '', component: HomeComponent ,canActivate:[authGuard]},
   { path: 'products', component: ProductsComponent ,canActivate:[authGuard]},
-  { path: 'products/:id', component: ProductDetailsComponent, canActivate: [authGuard] },
   { path: 'about', component: AboutComponent,canActivate:[authGuard] },
   { path: 'contact', component: ContactComponent,canActivate:[authGuard] },
   { path: 'signin', component: SigninComponent, }
